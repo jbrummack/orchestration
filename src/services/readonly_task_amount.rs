@@ -1,9 +1,9 @@
 use crate::state::models::tasks::GetTask;
 use crate::state::AppState;
 
-use actix_web::{get, web, App, HttpResponse, HttpServer, Responder};
+use actix_web::{get, web, Responder};
 
-#[get("/task_test")]
+#[get("/task_pending")]
 pub async fn readonly_task_amount(
     data: web::Data<AppState>,
     post: web::Json<GetTask>,
@@ -14,3 +14,7 @@ pub async fn readonly_task_amount(
     //HttpResponse::Ok().body(web::Json(db))
     web::Json(db)
 }
+
+//curl -d '{"amount":1,"assigned_worker":20}' -H "Content-Type: application/json" -X GET http://localhost:8080/task_test
+//pub amount: i64,
+//pub assigned_worker: i64,

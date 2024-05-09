@@ -1,4 +1,4 @@
-use crate::state::models::tasks::GetTaskResponse;
+//use crate::state::models::tasks::GetTaskResponse;
 use crate::state::*;
 
 impl SQLiteBackend {
@@ -18,7 +18,6 @@ impl SQLiteBackend {
         format!("{:?}", res)
     }
     pub async fn assign_worker_task(&self, amount: i64, assigned_worker: i64) {
-        /*let res = */
         let q = sqlx::query(
             "UPDATE tasks
                  SET assigned_worker = ?

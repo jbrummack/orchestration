@@ -1,13 +1,7 @@
-use crate::state::models::tasks::GetTask;
+//use crate::state::models::tasks::GetTask;
 use crate::state::models::tasks::GetTaskResponse;
 
 use crate::state::*;
-
-use serde::Serialize;
-use serde_json::map;
-use sqlx::{migrate::MigrateDatabase, Execute, Row, Sqlite, SqlitePool};
-
-const DB_URL: &str = "sqlite://sqlite.db";
 
 impl SQLiteBackend {
     //tasks.result_id

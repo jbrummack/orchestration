@@ -28,7 +28,7 @@ pub struct GetTaskResponse {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct InferenceJob {
-    pub link: String,
+pub struct PostTask {
+    pub task: String,
     pub usr_id: u64,
 }
