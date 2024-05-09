@@ -11,4 +11,8 @@ Every worker can `get` tasks from the api via `/task` and `put` the results back
 - user authentication
 - cursors for syncing results
 - improve the API
+- write tests
+
+### Possible features:
+- add MySQL and Postgres support
 
