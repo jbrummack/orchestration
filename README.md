@@ -15,4 +15,5 @@ Every worker can `get` tasks from the api via `/task` and `put` the results back
 
 ### Possible features:
 - add MySQL and Postgres support
+- web GUI
 
