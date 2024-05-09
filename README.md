@@ -12,6 +12,7 @@ Every worker can `get` tasks from the api via `/task` and `put` the results back
 - cursors for syncing results
 - improve the API
 - write tests
+- create clients for Python, JS, Swift & Rust
 
 ### Possible features:
 - add MySQL and Postgres support
