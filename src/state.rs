@@ -7,7 +7,7 @@ pub mod storage;
 
 use sqlx::{migrate::MigrateDatabase, Sqlite, SqlitePool};
 
-const DB_URL: &str = "sqlite://sqlite.db";
+const DB_URL: &str = "sqlite://sqlite.db"; //"sqlite://sqlite.db"
 
 pub struct AppState {
     pub storage: SQLiteBackend,

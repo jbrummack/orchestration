@@ -21,7 +21,11 @@ impl SQLiteBackend {
         .execute(&self.conn.clone())
         .await
         .unwrap();
-        format!("✅ Initialized tasks: {:?}", res)
+        let idx = sqlx::query("CREATE INDEX IF NOT EXISTS idx_progress ON tasks(result_id);")
+            .execute(&self.conn.clone())
+            .await
+            .unwrap();
+        format!("✅ Initialized tasks: {:?}; idx: {:?}", res, idx)
     }
 
     pub async fn fetch_task(&self, amount: i64, assigned_worker: i64) -> Vec<GetTaskResponse> {
